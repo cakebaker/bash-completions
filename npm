@@ -1,0 +1,12 @@
+_npm()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="help install outdated publish update"
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+}
+complete -F _npm npm
+

@@ -1,0 +1,12 @@
+_gem()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="cleanup help install list outdated"
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+}
+complete -F _gem gem
+
