@@ -4,7 +4,7 @@ _nanoc()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="compile help"
+    opts="compile deploy help"
 
     COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
 }
